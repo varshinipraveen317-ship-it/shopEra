@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700&display=swap');
+
+.products-page {
+  padding: 40px 0;
+  background-color: #fdfaf9;
+}
+
+/* ===== HEADER STYLING ===== */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #3e2723;
+  padding-bottom: 20px;
+}
+
+.products-page h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #3e2723;
+  margin: 0;
+}
+
+.add-btn {
+  background-color: #3e2723;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.add-btn:hover {
+  background-color: #795548;
+  padding: 12px 45px;
+}
+
+/* ===== TABLE LAYOUT ===== */
+.products-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px; /* Spacing between rows */
+}
+
+/* Show header now that we have more columns */
+.products-table thead th {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #a08d86;
+  text-align: left;
+  padding: 0 20px 10px 20px;
+  border-bottom: 1px solid #efebe9;
+}
+
+.products-table tbody tr {
+  background-color: #ffffff;
+  border: 1px solid #efebe9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.products-table tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(62, 39, 35, 0.05);
+}
+
+.products-table td {
+  padding: 20px;
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e2723;
+}
+
+/* Column Specifics */
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #efebe9;
+}
+
+.products-table td:nth-child(2) { /* Name */
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 20%;
+}
+
+.products-table td:nth-child(3) { /* Category */
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #795548;
+}
+
+/* ===== ROOM TAGS (NEW) ===== */
+.room-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.room-tag {
+  background-color: #f5f0ee;
+  color: #3e2723;
+  font-size: 0.6rem;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.muted {
+  color: #d7ccc8;
+}
+
+/* Price & Stock */
+.products-table td:nth-child(5) { /* Price */
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.products-table td:nth-child(6) { /* Stock */
+  font-size: 0.8rem;
+  color: #795548;
+}
+
+/* ===== ACTIONS ===== */
+.action-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #3e2723;
+  letter-spacing: 1px;
+}
+
+.edit-btn {
+  background-color: #3e2723;
+  color: #ffffff;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: #3e2723;
+}
+
+.edit-btn:hover {
+  background-color: #795548;
+  border-color: #795548;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+  color: white;
+  border-color: #c53030;
+}
+
+.empty-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #795548;
+  text-align: center;
+  margin-top: 50px;
+}

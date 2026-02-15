@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700&display=swap');
+
+.orders-page {
+  padding: 40px 0;
+  background-color: #fdfaf9;
+}
+
+/* ===== HEADER ===== */
+.orders-page h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #3e2723;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #3e2723;
+  padding-bottom: 20px;
+}
+
+/* ===== TABLE TO CARDS ===== */
+.orders-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+.orders-table thead {
+  display: none; /* Maintains the card look */
+}
+
+.orders-table tbody tr {
+  background-color: #ffffff;
+  border: 1px solid #efebe9;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.orders-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 15px 15px 0px -5px #efebe9; /* Your signature shadow */
+}
+
+.orders-table td {
+  padding: 30px 20px;
+  vertical-align: middle;
+}
+
+/* ORDER ID & CUSTOMER */
+.orders-table td:nth-child(1) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a08d86;
+  width: 15%;
+}
+
+.orders-table td:nth-child(2) {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3e2723;
+  width: 30%;
+}
+
+/* TOTAL AMOUNT */
+.orders-table td:nth-child(3) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3e2723;
+}
+
+/* STATUS TAG */
+.orders-table td:nth-child(4) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #795548;
+}
+
+.orders-table td:nth-child(4)::before {
+  content: "STATUS: ";
+  font-weight: 700;
+  color: #d7ccc8;
+}
+
+/* ACTION BUTTON (Mark Delivered) */
+.orders-table td button {
+  background-color: #3e2723;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+.orders-table td button:hover {
+  background-color: #795548;
+  padding: 10px 30px; /* Stretching effect */
+}
+
+/* EMPTY STATE */
+.orders-page p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #795548;
+  text-align: center;
+  margin-top: 50px;
+}

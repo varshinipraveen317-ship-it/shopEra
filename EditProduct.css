@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700&display=swap');
+
+.edit-product-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.edit-product-container h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #3e2723;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #3e2723;
+  padding-bottom: 10px;
+}
+
+/* ===== FORM STYLING ===== */
+.edit-product-form {
+  background-color: #ffffff;
+  padding: 50px;
+  border: 1px solid #efebe9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-shadow: 20px 20px 0px -5px #efebe9;
+}
+
+/* ===== INPUTS, SELECT & TEXTAREA ===== */
+.edit-product-form input:not([type="checkbox"]),
+.edit-product-form select,
+.edit-product-form textarea {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px solid #d7ccc8;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #3e2723;
+  transition: all 0.3s ease;
+}
+
+.edit-product-form input:focus,
+.edit-product-form select:focus,
+.edit-product-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #3e2723;
+  padding-left: 8px;
+}
+
+.edit-product-form select {
+  cursor: pointer;
+  color: #3e2723;
+  text-transform: capitalize;
+}
+
+/* ===== ROOMS SECTION ===== */
+.rooms-section {
+  grid-column: span 2;
+  padding: 10px 0;
+  border-bottom: 1px solid #efebe9;
+}
+
+.rooms-section p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #a08d86;
+  margin-bottom: 15px;
+}
+
+.rooms-section label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: #3e2723;
+  cursor: pointer;
+}
+
+.rooms-section input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  accent-color: #3e2723;
+}
+
+/* Full width elements */
+.edit-product-form textarea,
+.edit-product-form input[type="file"],
+.image-preview,
+.edit-product-form button {
+  grid-column: span 2;
+}
+
+.edit-product-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== IMAGE PREVIEW ===== */
+.image-preview {
+  margin: 10px 0;
+}
+
+.image-preview img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #efebe9;
+  background-color: #fdfaf9;
+}
+
+/* ===== FILE INPUT ===== */
+.edit-product-form input[type="file"] {
+  border-bottom: none;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #795548;
+}
+
+.edit-product-form input[type="file"]::file-selector-button {
+  background-color: #3e2723;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.edit-product-form input[type="file"]::file-selector-button:hover {
+  background-color: #795548;
+}
+
+/* ===== BUTTONS ===== */
+.edit-product-form button {
+  background-color: #3e2723;
+  color: #ffffff;
+  border: none;
+  padding: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 20px;
+}
+
+.edit-product-form button:hover:not(:disabled) {
+  background-color: #795548;
+  letter-spacing: 6px;
+}
+
+.edit-product-form button:disabled {
+  background-color: #d7ccc8;
+  cursor: not-allowed;
+  letter-spacing: 4px; /* Stop expansion when disabled */
+}
+
+/* ===== ERROR TEXT ===== */
+.error-text {
+  grid-column: span 2;
+  color: #c53030;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .edit-product-form {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .edit-product-form input,
+  .edit-product-form select,
+  .edit-product-form textarea,
+  .edit-product-form button,
+  .rooms-section,
+  .image-preview {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,128 @@
+/* Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap');
+
+.dashboard {
+  padding: 3rem 5%;
+  background-color: #fdfaf9; /* Warm Cream */
+  min-height: 100vh;
+  color: #3e2723; /* Espresso */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Titles */
+.dashboard-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  font-size: 1rem;
+  color: #795548; /* Cocoa */
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+
+/* Quick Action Buttons */
+.dashboard-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.dashboard-actions button {
+  background-color: transparent;
+  border: 1px solid #3e2723;
+  color: #3e2723;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-actions button:hover {
+  background-color: #3e2723;
+  color: #fdfaf9;
+}
+
+/* Section Headings */
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(121, 85, 72, 0.2);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats Grid - Now in Espresso Brown */
+.dashboard-stats ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.dashboard-stats li {
+  background-color: #3e2723; /* Espresso Brown Background */
+  color: #fdfaf9; /* Warm Cream Text */
+  border: 1px solid #795548; /* Cocoa Border */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(62, 39, 35, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dashboard-stats li:hover {
+  transform: translateY(-5px);
+  background-color: #795548; /* Shifts to Cocoa on hover */
+}
+
+/* Specific styling for the labels inside the brown boxes */
+.dashboard-stats li::first-line {
+  font-size: 0.8rem;
+  color: rgba(253, 250, 249, 0.7); /* Faded Warm Cream */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Activity Section Container - Now in Espresso Brown */
+.dashboard-activity {
+  background-color: #3e2723; /* Espresso Brown Background */
+  padding: 2.5rem;
+  border-radius: 4px;
+  color: #fdfaf9; /* Warm Cream Text */
+}
+
+.dashboard-activity h2 {
+  color: #fdfaf9;
+  border-bottom: 1px solid rgba(253, 250, 249, 0.2);
+}
+
+.dashboard-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-activity li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(253, 250, 249, 0.1);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  color: #fdfaf9;
+}
+
+.dashboard-activity li::before {
+  content: "✦"; /* Boutique-style ornament */
+  color: #795548; /* Cocoa contrast */
+  font-size: 1rem;
+  margin-right: 1rem;
+}

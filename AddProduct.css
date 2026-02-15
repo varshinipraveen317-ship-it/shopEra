@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700&display=swap');
+
+.add-product-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.add-product-container h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #3e2723;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #3e2723;
+  padding-bottom: 10px;
+}
+
+/* ===== FORM LAYOUT ===== */
+.add-product-form {
+  background-color: #ffffff;
+  padding: 50px;
+  border: 1px solid #efebe9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-shadow: 20px 20px 0px -5px #efebe9;
+}
+
+/* ===== SHARED INPUT & SELECT STYLING ===== */
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form select,
+.add-product-form textarea {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px solid #d7ccc8;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #3e2723;
+  transition: all 0.3s ease;
+}
+
+.add-product-form select {
+  cursor: pointer;
+  color: #a08d86;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M0 3l5 5 5-5z' fill='%233e2723'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.add-product-form input:focus,
+.add-product-form select:focus,
+.add-product-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #3e2723;
+  padding-left: 8px;
+}
+
+/* ===== ROOMS SECTION (NEW) ===== */
+.rooms-section {
+  grid-column: span 2; /* Stretch across the form */
+  padding: 10px 0;
+  border-bottom: 1px solid #efebe9;
+}
+
+.rooms-section p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #a08d86;
+  margin-bottom: 15px;
+}
+
+.rooms-section label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #3e2723;
+  cursor: pointer;
+}
+
+.rooms-section input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  accent-color: #3e2723; /* Luxury brown checkbox color */
+  cursor: pointer;
+}
+
+/* ===== FULL WIDTH ELEMENTS ===== */
+.add-product-form textarea,
+.add-product-form input[type="file"],
+.error-text,
+.add-product-form button {
+  grid-column: span 2;
+}
+
+.add-product-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== FILE UPLOAD ===== */
+.add-product-form input[type="file"] {
+  border-bottom: none;
+  padding: 20px 0;
+  font-size: 0.75rem;
+  color: #795548;
+}
+
+.add-product-form input[type="file"]::file-selector-button {
+  background-color: #3e2723;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.3s ease;
+}
+
+.add-product-form input[type="file"]::file-selector-button:hover {
+  background-color: #795548;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.add-product-form button {
+  background-color: #3e2723;
+  color: #ffffff;
+  border: none;
+  padding: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+}
+
+.add-product-form button:hover:not(:disabled) {
+  background-color: #795548;
+  letter-spacing: 6px;
+}
+
+.add-product-form button:disabled {
+  background-color: #d7ccc8;
+  cursor: not-allowed;
+}
+
+/* ===== ERROR TEXT ===== */
+.error-text {
+  color: #c53030;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .add-product-form {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .add-product-form input,
+  .add-product-form select,
+  .add-product-form textarea,
+  .add-product-form button,
+  .rooms-section {
+    grid-column: span 1;
+  }
+  .rooms-section label {
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
