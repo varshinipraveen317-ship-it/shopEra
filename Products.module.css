@@ -1,0 +1,61 @@
+.grid {
+  display: grid;
+  /* 'auto-fill' ensures the grid fills the width of the container */
+  /* minmax(250px) prevents cards from getting too squished */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+  /* Deep vertical gap (60px) creates a premium, un-congested feel */
+  gap: 60px 30px; 
+  
+  width: 100%;
+  padding: 40px 0;
+  box-sizing: border-box;
+  
+  /* Subtle entry animation */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Empty state message */
+.empty {
+  grid-column: 1 / -1; /* Spans across the entire grid to stay centered */
+  text-align: center;
+  padding: 100px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #795548;
+  letter-spacing: 1px;
+}
+
+/* Entry Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    /* Showing 2 items per row on mobile to keep it elegant */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 12px;
+  }
+  
+  .empty {
+    font-size: 1.2rem;
+  }
+}

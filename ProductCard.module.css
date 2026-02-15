@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  width: 100%;
+  transition: transform 0.3s ease;
+  /* Ensuring the card items have breathing room */
+  padding-bottom: 10px;
+}
+
+/* IMAGE CONTAINER */
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1.2; /* Elegant portrait ratio */
+  overflow: hidden;
+  background-color: #efebe9; /* Light earth-tone placeholder */
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover effect on image */
+.card:hover .imageWrapper img {
+  transform: scale(1.08);
+}
+
+/* TEXT CONTENT */
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #3e2723;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.price {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  /*font-style: italic;*/
+  color: #795548;
+  margin: 0 0 15px 0;
+}
+
+/* BUTTON STYLING */
+.buyBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #3e2723;
+  border: 1px solid #3e2723;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: auto; /* Pushes button to bottom if titles vary in length */
+}
+
+/* Hover state for button: turns brown with white text */
+.buyBtn:hover {
+  background-color: #3e2723;
+  color: #ffffff;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .imageWrapper {
+    margin-bottom: 12px;
+  }
+  
+  .title {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+
+  .buyBtn {
+    padding: 10px;
+    font-size: 0.6rem;
+    /* On mobile, making it solid makes it easier to tap */
+    background-color: #3e2723;
+    color: #ffffff;
+  }
+}
