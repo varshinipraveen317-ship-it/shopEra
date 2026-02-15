@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfaf9; /* A very soft cream background */
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(78, 52, 46, 0.08); /* Brown-tinted shadow */
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid #efebe9;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3e2723; /* Darkest coffee brown */
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #8d6e63; /* Muted brown */
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d7ccc8; /* Light cocoa border */
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #4e342e; /* Deep Coffee */
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(78, 52, 46, 0.1);
+}
+
+.signupBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4e342e; /* Deep Coffee */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.signupBtn:hover {
+  background-color: #795548; /* Warm Latte hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(78, 52, 46, 0.2);
+}
+
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #6d4c41;
+}
+
+.footer span {
+  color: #4e342e; /* Deep Coffee link */
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer span:hover {
+  color: #795548;
+  text-decoration: underline;
+}

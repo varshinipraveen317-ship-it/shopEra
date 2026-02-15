@@ -1,0 +1,114 @@
+.footer {
+  background-color: #3e2723; /* Deep Coffee - matches your hero text and buttons */
+  color: #fdfaf9; /* Designer white text */
+  padding: 20px 5% 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 60px; /* Gap from the last section */
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Brand takes more space */
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== BRAND SECTION ===== */
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #efebe9; /* Softer latte color for text */
+  max-width: 250px;
+}
+
+/* ===== HEADINGS ===== */
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: #795548; /* Warm Latte accent */
+}
+
+/* ===== LISTS & CONTACT ===== */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #efebe9;
+}
+
+.list li:hover {
+  color: #ffffff;
+  padding-left: 5px; /* Subtle movement on hover */
+}
+
+.contact {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  color: #efebe9;
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottomBar {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(239, 235, 233, 0.1); /* Very subtle line */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: rgba(239, 235, 233, 0.5);
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 968px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 20px 20px;
+    text-align: center;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr; /* Stack everything on mobile */
+    gap: 40px;
+  }
+
+  .tagline {
+    margin: 0 auto;
+  }
+
+  .list li:hover {
+    padding-left: 0; /* Remove horizontal hover on mobile center-align */
+  }
+}

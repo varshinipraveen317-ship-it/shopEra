@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 5%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #efebe9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+/* 1. Logo */
+.logo {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4e342e;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+/* 2. Search Input */
+.searchInput {
+  flex: 0 1 300px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #d7ccc8;
+  background-color: #fdfaf9;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.searchInput:focus {
+  border: 1.7px solid #4e342e;
+  background-color: #fff;
+}
+
+.searchInput:hover {
+  border: 1.7px solid #795548;
+}
+
+/* 3. Navigation Links */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem; /* Reduced gap because padding handles the spacing now */
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5d4037;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem; /* Creates the "box" area */
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1.5px; 
+}
+
+/* Hover State: Changes to Brown Box */
+.navLinks li:hover {
+  color: #ffffff;
+  background-color: #4e342e;
+}
+
+/* 4. Actions Area */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Profile and Cart: Icon Style */
+.profileBtn, 
+.cart {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  transition: transform 0.2s ease;
+  /* Gives emojis a subtle coffee-toned aesthetic */
+  filter: sepia(0.6) saturate(1.5) brightness(0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileBtn:hover, 
+.cart:hover {
+  transform: scale(1.15);
+  filter: none; /* Return to original color on hover */
+}
+
+/* Logout Button */
+.logoutBtn {
+  color: #fdfaf9;
+  background-color: #4e342e;
+  border: 1px solid #4e342e;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logoutBtn:hover {
+  opacity:0.9;
+  box-shadow: 0 4px 10px rgba(78, 52, 46, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .searchInput {
+    display: none; /* Hide search on tablets to save space */
+  }
+  .navLinks {
+    gap: 0.2rem;
+  }
+  .navLinks li {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
