@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700&display=swap');
+
+/* ===== MAIN CONTAINER ===== */
+.shop {
+  background-color: #fdfaf9;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 2% 80px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ===== BACK TO HOME BUTTON ===== */
+.backBtn {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #795548;
+  cursor: pointer;
+  margin-bottom: 20px; /* Reduced from 30px */
+  margin-left: 1%;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  color: #3e2723;
+  transform: translateX(-8px);
+}
+
+/* ===== TITLE & BREADCRUMB ===== */
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #3e2723;
+  margin: 0 0 20px 1%; /* Reduced from 30px to bring filters closer to title */
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.subTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #795548;
+  opacity: 0.7;
+}
+
+/* ===== FILTERS WRAPPER ===== */
+.filtersWrapper {
+  width: 100%;
+  margin-bottom: 30px; /* Reduced from 60px to bring grid closer to filters */
+  padding: 0 1% 20px;  /* Reduced from 30px */
+  border-bottom: 1px solid #efebe9;
+}
+
+.categoryFilters, 
+.roomFilters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BUTTON BASE STYLING */
+.categoryFilters button,
+.roomFilters button {
+  background: none;
+  border: 1px solid #d7ccc8;
+  color: #3e2723;
+  padding: 14px 40px;
+  min-width: 140px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  outline: none;
+}
+
+/* 1. HOVER STATE */
+.categoryFilters button:hover,
+.roomFilters button:hover {
+  background-color: #3e2723;
+  color: #ffffff;
+  border-color: #3e2723;
+}
+
+/* 2. ACTIVE STATE (The Selected Button) */
+.active {
+  background-color: #3e2723 !important;
+  color: #ffffff !important;
+  border-color: #3e2723 !important;
+}
+
+/* ===== PRODUCT GRID ===== */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 40px 20px; /* Reduced vertical gap from 60px to 40px */
+  width: 100%;
+  padding: 0 1%;
+  justify-items: stretch;
+}
+
+.emptyText {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 100px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: #795548;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .shop {
+    padding: 30px 3% 60px;
+  }
+
+  .filtersWrapper {
+    margin-bottom: 20px; 
+  }
+
+  .categoryFilters button,
+  .roomFilters button {
+    padding: 10px 25px;
+    min-width: 110px;
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 12px; 
+  }
+  
+  .title {
+    margin-bottom: 15px;
+  }
+}

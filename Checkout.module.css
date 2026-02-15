@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700;800&display=swap');
+
+.checkout {
+  background-color: #fdfaf9;
+  min-height: 100vh;
+  padding: 60px 10% 100px;
+  color: #3e2723;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.checkout h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ===== SECTIONS (Address & Payment) ===== */
+.section {
+  background: white;
+  padding: 30px;
+  border: 1.5px solid #3e2723;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px -2px #efebe9;
+}
+
+.section h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #efebe9;
+  padding-bottom: 10px;
+}
+
+.section textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  border: 1px solid #d7ccc8;
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  resize: none;
+  background-color: #fdfaf9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.section textarea:focus {
+  outline: none;
+  border-color: #3e2723;
+}
+
+/* CUSTOM RADIO LABELS */
+.section label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.section label:hover {
+  background-color: #fdfaf9;
+}
+
+.section input[type="radio"] {
+  accent-color: #3e2723;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ===== ORDER SUMMARY ===== */
+.summary {
+  background: white;
+  padding: 40px;
+  border: 1.5px solid #3e2723;
+  border-radius: 4px;
+}
+
+.summary h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+}
+
+.row span:last-child {
+  font-weight: 700;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Target the h2 Total in Summary */
+.summary h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: right;
+  margin: 30px 0;
+  border-top: 1px solid #efebe9;
+  padding-top: 20px;
+}
+
+/* Target the Place Order button inside summary */
+.summary button {
+  width: 100%;
+  background-color: #3e2723;
+  color: white;
+  border: 1.5px solid #3e2723;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.summary button:hover {
+  background-color: transparent;
+  color: #3e2723;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(62, 39, 35, 0.1);
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  padding: 100px 10%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.empty h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.empty button {
+  background-color: #3e2723;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .checkout {
+    padding: 40px 5%;
+  }
+  
+  .checkout h1 {
+    font-size: 2.5rem;
+  }
+  
+  .summary h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}

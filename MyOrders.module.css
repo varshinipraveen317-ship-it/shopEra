@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700;800&display=swap');
+
+.ordersPage {
+  background-color: #fdfaf9; /* Brand off-white background */
+  min-height: 100vh;
+  padding: 60px 5%;
+  color: #3e2723;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ordersPage h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+}
+
+/* ===== THE LUXURY BROWN CARD ===== */
+.orderCard {
+  background-color: #4e342e; /* Rich Mocha Brown */
+  color: #efebe9; /* Soft cream text */
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border: 1px solid #3e2723;
+  /* Deep, soft shadow for a "weighted" feel */
+  box-shadow: 0 10px 30px rgba(62, 39, 35, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle inner glow for a leather-like depth */
+.orderCard::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* NO MOVEMENT - only shadow depth change */
+.orderCard:hover {
+  box-shadow: 0 15px 45px rgba(62, 39, 35, 0.35);
+}
+
+/* HEADER: Elegant & Contrasted */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(239, 235, 233, 0.1);
+}
+
+.header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #d7ccc8; /* Lighter sand color */
+}
+
+.header span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* ITEM ROWS: Suede Texture Feel */
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  background-color: rgba(62, 39, 35, 0.3); /* Darker inset for items */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.orderItem img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 235, 233, 0.1);
+}
+
+.orderItem div p:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 3px 0;
+  color: #ffffff;
+}
+
+.orderItem div p:last-child {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #d7ccc8;
+  margin: 0;
+}
+
+/* FOOTER: Gold/Sand Accents */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.footer strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #d7ccc8;
+  color: #d7ccc8;
+  padding: 6px 14px;
+  border-radius: 20px; /* Capsule style */
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .orderCard {
+    padding: 20px;
+  }
+  
+  .orderItem {
+    gap: 15px;
+  }
+
+  .orderItem img {
+    width: 55px;
+    height: 55px;
+  }
+}

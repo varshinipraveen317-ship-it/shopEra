@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,700&family=Montserrat:wght@100;400;700;800&display=swap');
+
+.productDetails {
+  background-color: #fdfaf9;
+  min-height: 100vh;
+  padding: 40px 8% 80px;
+  color: #3e2723;
+  box-sizing: border-box;
+}
+
+/* ===== NAVIGATION ===== */
+.backBtn {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #795548;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  color: #3e2723;
+  transform: translateX(-5px);
+}
+
+/* ===== MAIN SECTION ===== */
+.mainSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.mainSection img {
+  width: 100%;
+  aspect-ratio: 1/1.1;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 25px 25px 0px -5px #efebe9;
+}
+
+.info h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #795548;
+  margin-bottom: 20px;
+}
+
+/* ===== CONTROLS ===== */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+  background: #fff;
+  width: fit-content;
+  border: 1px solid #d7ccc8;
+}
+
+.quantity button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #3e2723;
+}
+
+.addToCart {
+  background-color: #3e2723;
+  color: #fff;
+  border: none;
+  padding: 18px 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addToCart:hover {
+  background-color: #5d4037;
+}
+
+/* ===== REVIEWS SECTION ===== */
+.reviews {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid #efebe9;
+  max-width: 850px;
+}
+
+.reviews h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.reviewCard {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  border: 1px solid #efebe9;
+  box-shadow: 8px 8px 0px -2px #efebe9;
+}
+
+/* YELLOW STARS FOR LIST */
+.stars {
+  color: #ffc107; /* Bright Furniture Gold/Yellow */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+}
+
+.reviewCard p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.date {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #a1887f;
+  letter-spacing: 1px;
+}
+
+.reviewActions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.reviewActions button {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #795548;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ===== ADD REVIEW FORM ===== */
+.addReview {
+  margin-top: 60px;
+  padding: 40px;
+  background: white;
+  border: 1.5px solid #3e2723;
+}
+
+.starInput {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #efebe9; /* Empty Grayish Star */
+}
+
+/* YELLOW STAR FOR INPUT */
+.activeStar {
+  color: #ffc107 !important; /* Forces the star to be Yellow */
+}
+
+.addReview textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1.5px solid #d7ccc8; /* Default light brown */
+  background: #fdfaf9;
+  font-family: 'Montserrat', sans-serif;
+  resize: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* FIX: This makes the border brown when you click/type */
+.addReview textarea:focus {
+  outline: none;
+  border-color: #3e2723; /* Your Brand Brown */
+}
+
+.addReview button {
+  background-color: #3e2723;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.warning {
+  color: #795548;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  background: #efebe9;
+  padding: 15px;
+  border-left: 4px solid #3e2723;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .mainSection { grid-template-columns: 1fr; }
+}
